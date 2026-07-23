@@ -1,8 +1,8 @@
 #heading{
-    color:antiquewhite;
+    color:rgb(218, 205, 189);
 }
 body{
-    background-color:rgb(228, 182, 118);
+    background-color:antiquewhite;
 }
 .highlight{
     color:rgb(70, 114, 114)
@@ -10,3 +10,18 @@ body{
 #firstid{
     font-size: 20px;
 }
+h1{
+    color:rgb(167, 148, 126)    
+}
+
+header{
+    background-color: rgb(112, 87, 49);
+}
+footer{
+    background-color: rgb(58, 87, 87);
+    color:rgb(236, 207, 170)
+}
+main{
+    background-color: rgb(213, 193, 162);
+}
+

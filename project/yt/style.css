@@ -167,3 +167,25 @@ li{
     width: 32%;
     height: 32%;
 }
+
+.footer-box{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 10px;
+    width: 20%;
+    height: 80vh;
+    z-index: 1;
+    background-color: rgb(39, 39, 39);
+}
+.mainu{
+    border: 1px solid black;
+    padding: 10px 30px;
+    margin: 5px 10px;
+    display: inline-block;
+    border-radius: 15px;
+    width: 260px;
+    height: 60px;
+    z-index: 5;
+    background-color: rgb(99, 84, 84);
+}

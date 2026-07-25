@@ -1,11 +1,22 @@
-div {
+.logo {
+    width: 70px;
+    height: 40px;
+    background-color: rgb(252, 255, 250);
+}
+
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    transform: rotatex(45deg);
-    transform: rotatey(45deg);
-    transform: rotatez(45deg);
+}
+
+.right ul {
+    display: flex;
+    gap: 30px;
+}
+
+.right ul li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
 }

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.yellow-line{
+    gap: 10px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+    background-color: yellow;
+}
+
+.navbar {
+    padding: 0 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+}
+
+.logo{
+    width: 80px;
+    height: 64px;
+}
+
+ul {
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+li{
+    font-size: 11px;
+}
+.downb{
+    border: none;
+    height: 30px;
+    width: 86px;
+    background-color: rgb(216, 228, 83);
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.trybg{
+    position: absolute;
+    background-color: rgb(56, 57, 45);
+    z-index: 0;
+    height: 200%;
+    width: 100%;
+    border-radius: 7px;
+}
+.try{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10% 0 0px 0px;
+    align-items: top;
+    background-color: rgb(86, 87, 66);
+}
+.maintext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 88, 8);
+    height: 20%;
+    width: 60%;
+}
+
+.maintext span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

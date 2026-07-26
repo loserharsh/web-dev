@@ -1,9 +1,12 @@
 *{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+main{
+    position: relative;
+}
 header{
     position: fixed;
     top: 0;
@@ -55,6 +58,8 @@ li{
     font-size: 11px;
 }
 .downb{
+    /* position: relative; */
+            
     border: none;
     height: 30px;
     width: 86px;
@@ -64,33 +69,36 @@ li{
 }
 
 .trybg{
-    position: absolute;
-    background-color: rgb(173, 186, 30);
+    /* background-color: rgb(30, 143, 92); */
+    position: relative;
+    top: 40px;
     z-index: 0;
-    height: 200%;
+    height: 120%;
     width: 100%;
     border-radius: 7px;
 }
 .try{
     width: 100%;
-    height: 100%;
+    height: 600px;
     display: flex;
     justify-content: top;
     padding: 8% 0 0px 0px;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(93, 60, 60); */
     flex-direction: column;
+
 }
 .maintext{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     background-color: rgb(255, 255, 255);
-    height: 20%;
+    height: 40%;
     width: 60%;
 }
 
 .maintext span{
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,14 +118,98 @@ li{
 
 .cardss{
     display: grid;
-    grid: 100px 100px 100px 100px 100px  / 1fr 1fr 1fr;
+    grid: 100px 100px 100px  / 1fr 1fr 1fr;
     width: 80%;
     height: 500px;
     /* background-color: aqua; */
 }
 
 .cardss div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(221, 221, 218);
     border-radius: 8px;
     margin: 10px;
+}
+.cardss div button{
+    border: none;
+    background-color: rgb(216, 228, 83);
+    height: 20px;
+    width: 90px;
+    margin-top: 7px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+.cardss div span{
+    font-size: 10px;
+    text-align: center;
+}
+
+.footerr{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    height:210px;
+    /* background-color: rgb(139, 139, 53); */
+}
+.footerr div{
+    width: 270px;
+    height: 150px;
+    display: flex;
+    /* background-color: rgb(52, 151, 221); */
+    justify-content: center;
+    align-content: center;
+}
+.i1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.span1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.span2{
+    font-size: 10px;
+    text-align: left;
+}
+.i2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    flex-direction: column;
+    border-radius: 13px;
+    background-color: rgb(81, 82, 81);
+}
+.i2 div{
+    border-radius: 8px;
+    width:200px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+}
+.i2 button{
+    border: none;
+    background-color: rgb(216, 228, 83);
+    height: 30px;
+    width: 50px;
+    margin-top: 7px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+
+.subl{
+    font-size: 18px;
+    color:rgb(41, 176, 176);
+    width: 200px;
+    font-weight: 600;
+}
+
+.enterem{
+    font-size: 12px;
 }

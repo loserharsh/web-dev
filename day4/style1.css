@@ -230,10 +230,6 @@ li{
     /* background-color: rgb(176, 110, 167); */
 }
 
-.realf2{
-    background-color: rgb(33, 32, 33);
-    border-radius: 15px;
-}
 .realf1{
     display: flex;
     justify-content: space-around;
@@ -251,4 +247,20 @@ li{
     width: 40%;
     height: 80%;
     /* background-color: rgb(176, 110, 167); */
+}
+
+.realf2{
+    display: grid;
+    grid: 70% 30% / 40% 1fr 1fr 1fr 1fr;
+    background-color: rgb(33, 32, 33);
+    border-radius: 15px;
+}
+.realf2 div{
+    font-size: 8px;
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 10px;
 }

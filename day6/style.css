@@ -1,44 +1,24 @@
 .container{
-    width: 60vw;
-    height: 50vh;
-    background-color: #ea5151;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s cubic-bezier(0, 0, 0.11, 0.95);
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmXmFMRFRgh8hAOyOu3LLEyQWK1E3qtzfyKYQ37iFJhLlwDxh315J634&s=10);
+    background-size: cover;
+    background-position: center;
 }
 
-.box{
-    flex:0 0 auto;
-    gap: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: #cadcca;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s cubic-bezier(0, 0, 0.11, 0.95);
-    border-radius: 10px;
-    animation: animation 2s linear infinite;
+img{
+    width: 500px;
+    height: 400px;
+    /* object-fit: contain; */
+    /* object-fit: cover; */
+    object-fit: fill;
+    /* object-position:  bottom right; */
 }
 
-.box:hover{
-    cursor: pointer;
-    background-color: #0e180e;
-    width: 200px;
-    height: 80px;
-}
-
-.container:hover{
-    background-color: #e0e0e0;
-}
-
-@keyframes animation {
-    from{
-    }
-    to{
-        transform:translateX(100px);
-    }
+.container > div{
+    width:20px;
+    height: 20px;
+    background-color: red;
+    
 }

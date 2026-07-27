@@ -45,3 +45,34 @@ span{
 }
 
 
+.sidebar > div{
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px 7px;
+    display: flex;    
+    gap: 40px;
+    background-color: rgb(43, 42, 42);
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.div-eye{
+    padding: 10px;
+    background-color: rgb(44, 43, 43);
+    border-radius: 50%;
+}
+
+.btn{
+    width: 120px;
+    height: 20px;
+    border-radius: 6px;
+    border:none;
+    background-color: rgb(109, 108, 108);
+
+}

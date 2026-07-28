@@ -1,24 +1,38 @@
-// console.log("hello world hoohoooohooooohc")
+console.log("Hello, World!");
 
-let a = 10;
-
-
-let c = a > 18 ? "you are eligible to vote" : "you are not eligible to vote"
-
-console.log(c)
-
-if(a > 18){
-    console.log("you are eligible to vote")
-}
-else if(a < 0 || a > 100){
-    console.log("invalid age")
+for (let i = 1; i <= 5; i++) {
+    // console.log(i);
 }
 
-else if(a < 18){
-    console.log("you are not eligible to vote")
+string = "JavaScript";
+
+let object = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+object.country = "USA";
+for (const key in object) {
+    // console.log(key + ": " + object[key]);
 }
 
-
-else{
-    console.log("you are not eligible to vote")
+for (let char of string){
+    // console.log(char)
 }
+
+let array = [1, 2, 3, 4, 5];
+for (let num of array) {
+   // console.log(num);
+}
+
+let fwhile = 0;
+while (fwhile < 5) {
+    // console.log(fwhile);
+    fwhile++;
+}
+let hs = 10;
+do{
+    // console.log(hs);
+    hs++;
+}while(hs < 5);

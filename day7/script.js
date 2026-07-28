@@ -1,38 +1,15 @@
-console.log("Hello, World!");
+function something(name){
+    // console.log("Hello " + name);
+    // console.log("How are you, " + name + "?");
 
-for (let i = 1; i <= 5; i++) {
-    // console.log(i);
 }
 
-string = "JavaScript";
+something("John");
+something("Alice");
 
-let object = {
-    name: "John",
-    age: 30,
-    city: "New York"
-};
-
-object.country = "USA";
-for (const key in object) {
-    // console.log(key + ": " + object[key]);
+function add(a, b){
+    return a + b;
 }
 
-for (let char of string){
-    // console.log(char)
-}
-
-let array = [1, 2, 3, 4, 5];
-for (let num of array) {
-   // console.log(num);
-}
-
-let fwhile = 0;
-while (fwhile < 5) {
-    // console.log(fwhile);
-    fwhile++;
-}
-let hs = 10;
-do{
-    // console.log(hs);
-    hs++;
-}while(hs < 5);
+let sum = add(5, 10);
+console.log("The sum is: " + sum);

@@ -1,20 +1,49 @@
-let name1 = "John";
-let name2 = "Doe";
+let arr = [1, 2, 3, 4, 5];
+// console.log(arr);
+// console.log(arr.length);
+arr[0] = 10;
+// console.log(arr[0]);
+// console.log(arr[4]);
 
-console.log(name1);
+// console.log(arr.toString())
+// console.log(arr.join(' '))
 
-console.log(`this name is ${name1} and this name is ${name2}`);
+let newarr = [1,2,3,4,5,6,7,8,9,10];
 
-let name3 = "lorem ipsum";
+// console.log(newarr.pop());
+// console.log(newarr.pop());
+newarr.push(11);
+// console.log(newarr.toString());
 
-console.log(name3.toUpperCase());
-console.log(name3.toLowerCase());
-console.log(name3.length);
-console.log(name3.charAt(0));
-console.log(name3.charAt(6));
-console.log(name3.indexOf("ipsum"));
-// console.log(name3.capitalize()); // This will throw an error because capitalize is not a standard JavaScript method
-console.log(name3.slice(0, 5));
-console.log(name3.substring(0, 7));
-console.log(name3.replace("lorem", "hello"));
+let a1 = [1,9,3,7,5];
+let a2 = ['a','b','c','d','e'];
 
+let c1 = a1.concat(a2);
+// console.log(c1.join(' '));
+
+// a1.forEach((val, index, arr) => {
+//     console.log(val, index, arr);
+// }); 
+
+// forin loop
+for (let index in a1) {
+    // console.log(a1[index]);
+}
+
+// for of loop
+for (let val of a1) {
+    // console.log(val);
+}   
+
+let a = [1,4,2,5,2];
+let b = [];
+for (let i = 0; i < a.length; i++) {
+    let ele = a[i];
+    b.push(ele * 2);
+};
+console.log(b);
+
+let c = a.map(w => {
+    return w * 2;
+});
+console.log(c);

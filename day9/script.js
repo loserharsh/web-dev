@@ -1,29 +1,20 @@
-const colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray",
-    "cyan", "magenta", "lime", "teal", "indigo", "violet", "gold", "silver", "maroon", "navy", "olive"];
 
+function updateVideoInfo(title, viewCount, uploaderName, uploadDate , imagea) {
+    // Implementation for updating video info
+    const titles = document.querySelector('.title');
+    titles.insertAdjacentText('afterbegin', title);
 
-const boxing = document.querySelectorAll(".box");
-boxing.forEach((box) => {
-    box.style.display = "flex";
-    box.style.justifyContent = "center";
-    box.style.alignItems = "center";
-    box.style.width = "100px";
-    box.style.height = "100px";
-    box.style.border = "2px solid black";
-    
-});
+    const views = document.querySelector('.view');
+    views.insertAdjacentText('afterbegin', viewCount);
 
-const container = document.querySelector(".container");
-container.style.display = "flex";
-container.style.flex = "0 0 100%";
-container.style.justifyContent = "center";
-container.style.alignItems = "center";
-container.style.gap = "20px";
-container.style.height = "100vh";
-container.style.width = "100%";
+    const name = document.querySelector('.name');
+    name.insertAdjacentText('afterbegin', uploaderName);
 
+    const date = document.querySelector('.date');
+    date.insertAdjacentText('afterbegin', uploadDate);
+    const image = document.querySelector('.imag');
+    image.insertAdjacentHTML('beforeend', `<img width="100%" height="100%" src="${imagea}" alt="Video Thumbnail">`);
+    image.style.objectFit = 'cover';
+}
 
-boxing.forEach((box) => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    box.style.backgroundColor = randomColor;
-});
+updateVideoInfo('Installing vscode & how websites work sigma web development course - tutorial #1', '1,234,567', 'code with harry', '2 ', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy0iI6O610-l60ONVjoOFJ8enypJZZpU7FspqOHh39yA&s=10');

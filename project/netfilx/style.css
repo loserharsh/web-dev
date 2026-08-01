@@ -2,44 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font);
 }
-
-:root{
-    --red:#e50914;
-    --font:sans-serif;
-}
-
-main{
-    width: 100vw;
-    height: 200vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr;
+.background > img{
+    width: 100%;
+    filter: brightness(25%);
 }
 
 .navbar{
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 70%;
+    /* background-color:antiquewhite; */
+    height: 14vh;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 10%;
-    /* background-color: rgba(0,0,0,0.5); */
-}
-
-.logo > img{
-    margin: 20px 10px 0px 0px;
-    width: 100px;
-}
-
-.nav-links{
-    width: 20%;
-    height: 70%;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
     align-items: center;
-    background-color: blue;
+    padding: 0 40px;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 35%;
+    
+}
+.nav-links div{
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    outline: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.mtext{
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
 }

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'San Francisco';
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+header > div{
+    background-color: #080808;
+    width: 100vw;
+    height: 100vh;
+    color : white;
+}
+
+.navbar {
+    display:grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    height: 10vh;
+    /* background-color: #322b2b; */
+    font-size: 1.5rem;
+
+}
+.day{  
+    /* background-color: #7f7171; */
+    color : white;
+}
+
+.logo{
+    margin : 10px;
+    width: 60px;
+    height: 60px;
+    grid-area: 1/2/3/3;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #948b8b;
+}
+
+.day{
+    display: flex;
+    align-items: end;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.season{
+    display:flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 29px;
+}

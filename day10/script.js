@@ -1,8 +1,8 @@
-function getdata(){
+// function getdata(){
 
-}
+// }
 
-consnole.log("hello world");
+// consnole.log("hello world");
 
-let data = getdata();
+// let data = getdata();
 

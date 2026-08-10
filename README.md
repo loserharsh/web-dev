@@ -15,6 +15,7 @@ I'm learning by building projects instead of just watching tutorials. Every proj
 - UltraEdit Landing Page Clone
 - Netflix Clone (In Progress)
 - CSS Animation Experiments
+- Tracker ui (form reels)
 
 ## 📌 Note
 

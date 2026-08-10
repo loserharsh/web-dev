@@ -1,24 +1,51 @@
-# Web Development Journey   
-This repository contains the projects I build while learning web development.
+# 🌐 Web Development Journey
 
-I'm learning by building projects instead of just watching tutorials. Every project in this repository represents something new I learned.
+A collection of projects I’m building while learning **web development from scratch**.
+
+Instead of only following tutorials, I’m trying to learn by **building, breaking, fixing, and rebuilding things**. This repository tracks that process — from basic HTML/CSS experiments to more complete projects.
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (Learning)
+* **HTML5**
+* **CSS3**
+* **JavaScript** — Learning
+* **Git & GitHub**
 
-## 📂 Projects
+## 🚀 Projects
 
-- YouTube UI Clone
-- UltraEdit Landing Page Clone
-- Netflix Clone (In Progress)
-- CSS Animation Experiments
-- Tracker ui (form reels)
+| Project                         | Status         | What I Learned                 |
+| ------------------------------- | -------------- | ------------------------------ |
+| 🎬 YouTube UI Clone             | ✅ Completed    | HTML structure, CSS layouts    |
+| 📝 UltraEdit Landing Page Clone | ✅ Completed    | Layouts, positioning, styling  |
+| 🎬 Netflix Clone                | 🚧 In Progress | Building larger layouts        |
+| ✨ CSS Animation Experiments     | 🔄 Ongoing     | Animations & transitions       |
+| 📱 Tracker UI — Reels           | 🔄 Ongoing     | UI design & responsive layouts |
 
-## 📌 Note
+## 📈 What I'm Learning
 
-This repository documents my learning journey. You'll find both successful projects and failed attempts because they are part of the process.
+Currently focusing on:
 
-Feedback is always welcome!
+* HTML fundamentals
+* CSS layouts and positioning
+* Flexbox & Grid
+* Responsive design
+* CSS animations
+* JavaScript fundamentals
+* DOM manipulation
+* Git & GitHub
+
+## 🎯 Goal
+
+Build increasingly complex projects until I can create websites **without relying on tutorials for every step**.
+
+This repository will keep evolving as my skills improve.
+
+## 📌 About This Repository
+
+This isn't a collection of perfect projects.
+
+Some projects will be messy. Some will fail. Some will eventually be rebuilt from scratch.
+
+That's intentional.
+
+**The goal isn't to make the repository look perfect — it's to document the progress.**

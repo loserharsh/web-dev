@@ -1,7 +1,28 @@
+let newX = 0;
+let newY = 0;
+let startX = 0;
+let startY = 0;
 
-const box = document.querySelector(".flot");
+const flot = document.querySelector('.flot');
 
-document.addEventListener("mousemove", function (event) {
-    box.style.left = event.clientX + "px";
-    box.style.top = event.clientY + "px";
-});
+flot.addEventListener('mousedown', mousedown);
+
+function mousedown(e) {
+    startX = e.clientX;
+    startY = e.clientY;
+
+    document.addEventListener('mousemove', mousemove);
+    document.addEventListener('mouseup', mouseup);
+};
+
+function mousemove(e) {
+    newX =  startX - e.clientX ;
+    newY = startY - e.clientY;
+
+    flot.style.top = (flot.offsetTop - newX) + 'px';
+    flot.style.left = (flot.offsetLeft - newY) + 'px';
+};
+
+function mouseup(e){
+    document.removeEventListener('mousemove', mousemove);
+};

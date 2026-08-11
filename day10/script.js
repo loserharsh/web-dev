@@ -1,8 +1,29 @@
-// function getdata(){
+const messages = [
+    "Initializing Hacking...",
+    "Reading your Files...",
+    "Password files Detected...",
+    "Sending all passwords and personal files to server...",
+    "Cleaning up..."
+];
 
-// }
+const terminal = document.getElementById("terminal");
 
-// consnole.log("hello world");
+function addMessage(message) {
+    const line = document.createElement("div");
+    line.textContent = message;
+    terminal.appendChild(line);
+}
 
-// let data = getdata();
+async function startHacking() {
+    for (const message of messages) {
 
+        // random delay between 1 and 7 seconds
+        const delay = Math.floor(Math.random() * 3 + 1) * 1000;
+
+        await new Promise(resolve => setTimeout(resolve, delay));
+
+        addMessage(message + "...");
+    }
+}
+
+startHacking();

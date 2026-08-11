@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #252424;
+}
+
+
+.flot{
+    width: 154px;
+    height: 96px;
+    position: absolute;
+    background-color: #7c2a2a;
+}

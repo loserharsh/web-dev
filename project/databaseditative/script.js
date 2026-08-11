@@ -19,8 +19,13 @@ function mousemove(e) {
     newX =  startX - e.clientX ;
     newY = startY - e.clientY;
 
-    flot.style.top = (flot.offsetTop - newX) + 'px';
-    flot.style.left = (flot.offsetLeft - newY) + 'px';
+    startX = e.clientX;
+    startY = e.clientY;
+
+    flot.style.top = (flot.offsetTop - newY)  + 'px';
+    flot.style.left = (flot.offsetLeft - newX) + 'px';
+
+
 };
 
 function mouseup(e){

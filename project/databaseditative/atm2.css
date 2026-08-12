@@ -11,7 +11,7 @@
     flex-direction: column;
     width: 60px;
     height: 100vh;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .apps > div {

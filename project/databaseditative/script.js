@@ -1,38 +1,54 @@
-let newX = 0;
-let newY = 0;
-let startX = 0;
-let startY = 0;
+class Draggable {
+    constructor(element) {
+        this.element = element;
 
-const flot = document.querySelector('.flot');
-class Flot {
-    constructor(name) {
-        this.name = name;
-        this.flot = document.querySelector(`.${name}`);
-        this.flot.addEventListener('mousedown', this.mousedown.bind(this));
+        this.newX = 0;
+        this.newY = 0;
+        this.startX = 0;
+        this.startY = 0;
+
+        this.element.addEventListener("mousedown", this.mousedown.bind(this));
     }
 
     mousedown(e) {
-        startX = e.clientX;
-        startY = e.clientY;
+        this.startX = e.clientX;
+        this.startY = e.clientY;
 
-        document.addEventListener('mousemove', this.mousemove.bind(this));
-        document.addEventListener('mouseup', this.mouseup.bind(this));
+        document.addEventListener("mousemove", this.mousemove);
+        document.addEventListener("mouseup", this.mouseup);
     }
 
-    mousemove(e) {
-        newX = startX - e.clientX;
-        newY = startY - e.clientY;
-        startX = e.clientX;
-        startY = e.clientY;
-        this.flot.style.top = (this.flot.offsetTop - newY) + 'px';
-        this.flot.style.left = (this.flot.offsetLeft - newX) + 'px';
+    mousemove = (e) => {
+        this.newX = this.startX - e.clientX;
+        this.newY = this.startY - e.clientY;
 
-    }
+        this.startX = e.clientX;
+        this.startY = e.clientY;
 
-    mouseup(e) {
-        document.removeEventListener('mouseup', this.mouseup.bind(this));
-    }
+        this.element.style.top =
+            (this.element.offsetTop - this.newY) + "px";
 
+        this.element.style.left =
+            (this.element.offsetLeft - this.newX) + "px";
+    };
+
+    mouseup = () => {
+        document.removeEventListener("mousemove", this.mousemove);
+    };
 }
 
-const flotInstance = new Flot('flot');
+const flot = document.querySelector(".flot");
+const flot1 = document.querySelector(".flot1");
+
+
+addEventListener("mousedown", (e) => {
+    flot.style.zIndex = 1;
+    flot1.style.zIndex = 0;
+});
+addEventListener("mouseup", (e) => {
+    flot.style.zIndex = 0;
+    flot1.style.zIndex = 0;
+});
+
+const window1 = new Draggable(flot);
+const window2 = new Draggable(flot1);

@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="atm2.css">
 </head>
 <body>
-    <div class="main"> </div>
+    <div class="main">
+        <div class="apps">
+            <div class="app">one</div>
+            <div class="app">two</div>
+            <div class="app">three</div>
+            <template id="box-template">
+                <div class="box">
+                    <div class="tbar">
+                        <ul>
+                            <li class="minimize"> -- </li>
+                            <li class="close"> X </li>
+                        </ul>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
     <script src="atm.js"></script>
 </body>
 

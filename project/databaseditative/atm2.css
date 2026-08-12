@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.apps {
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    width: 60px;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.apps > div {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(82, 159, 159);
+}
+
+.box{
+    position: absolute;
+    top: 100px;
+    left: 100px;   
+    width: 320px;
+    height: 180px;
+    background-color: #57706b;
+}
+
+.box .tbar{
+    width: 100%;
+    height: 20px;
+    background-color: #bab7b7;
+}
+.tbar ul{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+li{
+    display: flex;
+    justify-content: center;
+    background-color: #7d3636;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.minimize{
+    background-color: #aa9c9c;
+}

@@ -4,7 +4,12 @@ function createBox() {
     const box = template.content.cloneNode(true);
 
     const closeButton = box.querySelector('.close');
+    const minimizeButton = box.querySelector('.minimize');
 
+    minimizeButton.addEventListener('click', () => {
+        const mbox = minimizeButton.closest('.box');
+        mbox.style.backgroundColor = 'red';
+    });
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
     });

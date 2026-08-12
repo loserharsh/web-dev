@@ -52,3 +52,14 @@ addEventListener("mouseup", (e) => {
 
 const window1 = new Draggable(flot);
 const window2 = new Draggable(flot1);
+
+
+
+const cross1 = document.querySelector(".flot .cross");
+cross1.addEventListener("click", () => {
+    flot.style.display = "none";
+});
+const cross2 = document.querySelector(".flot1 .crossf");
+cross2.addEventListener("click", () => {
+    flot1.style.display = "none";
+});

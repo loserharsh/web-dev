@@ -9,8 +9,15 @@
 .flot{
     width: 300px;
     height: 200px;
-    position:absolute;
+    position:absolute;  
     background-color: #7aa9ef;
+}
+.flot1{
+    width: 300px;
+    height: 200px;
+    position:absolute;  
+    background-color: #2e466a;
+    top: 250px;
 }
 
 .tbar{
@@ -19,4 +26,15 @@
     background-color: #d8d8d9;
     position: absolute;
     top: 0;
+}
+
+.cross{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    background-color: #cd5454;
+    position: absolute;
+    right: 0;
 }

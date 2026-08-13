@@ -2,7 +2,7 @@ const template = document.getElementById('box-template');
 let x = 100;
 let z = 1;
 
-function createBox(x,color1, image,z) {
+function createBox(x,color1, image,z, image2) {
     const box = template.content.cloneNode(true);
     const sbox = box.querySelector('.box');
     sbox.style.left = x + 100 + 'px';
@@ -19,12 +19,14 @@ function createBox(x,color1, image,z) {
     taskbarIcons.setAttribute('class', 'taskbar-icons1');
     document.querySelector('.taskbar-icons').appendChild(taskbarIcons);
     
-    taskbarIcons.style.backgroundImage = `url(${image})`;
+    taskbarIcons.style.backgroundImage = `url(${image2})`;
     taskbarIcons.style.backgroundSize = 'cover';
+    taskbarIcons.style.backgroundPosition = 'center';
     taskbarIcons.style.borderRadius = '10px';
     taskbarIcons.style.width = '100px';
     taskbarIcons.style.height = '100%';
-
+    
+    
     sbox.addEventListener('mousedown', () => {
         z++;
         sbox.style.zIndex = z;
@@ -40,8 +42,13 @@ function createBox(x,color1, image,z) {
     // Minimize
     minimizeButton.addEventListener('click', () => {
         const mbox = minimizeButton.closest('.box');
-        mbox.style.backgroundColor = '#8d3737';
+        mbox.style.display = 'none';
+        taskbarIcons.addEventListener('click', () => {
+            mbox.style.display = 'block';
+        });
     });
+
+
     const maximize1Button = box.querySelector('.maximize1');
     maximize1Button.style.display = 'none';
     maximize1Button.addEventListener('click', () => {
@@ -106,7 +113,7 @@ function createBox(x,color1, image,z) {
 const spawn = document.querySelector('.app1');
 
 spawn.addEventListener('click', () => {
-    createBox(x, undefined, 'https://i.pinimg.com/736x/ad/cb/5c/adcb5c8b2b97e49ac2ae289114dfa729.jpg', z);
+    createBox(x, undefined, 'https://i.pinimg.com/736x/ad/cb/5c/adcb5c8b2b97e49ac2ae289114dfa729.jpg', z, 'https://i.pinimg.com/736x/49/d9/db/49d9dbde634d2582cce4a76e18e69ba4.jpg');
     x += 14
 
 });
@@ -114,7 +121,7 @@ const app2 = document.querySelector('.app2');
 app2.style.backgroundColor = 'red';
 
 app2.addEventListener('click', () => {
-    createBox(x, 'red', 'https://i.pinimg.com/736x/26/43/b8/2643b82fc34daa34929d9fe268857eaa.jpg', z);
+    createBox(x, 'red', 'https://i.pinimg.com/736x/26/43/b8/2643b82fc34daa34929d9fe268857eaa.jpg', z, 'https://i.pinimg.com/736x/6a/4c/5e/6a4c5ed675aa1963d956b54afee88482.jpg');
     
     x += 14;
 });
@@ -122,6 +129,6 @@ const app3 = document.querySelector('.app3');
 app3.style.backgroundColor = 'blue';
 
 app3.addEventListener('click', () => {
-    createBox(x, 'blue', 'https://i.pinimg.com/736x/39/2f/f2/392ff28b2dac432be2e5779031d22d1a.jpg', z   );
+    createBox(x, 'blue', 'https://i.pinimg.com/736x/39/2f/f2/392ff28b2dac432be2e5779031d22d1a.jpg', z, 'https://i.pinimg.com/1200x/12/82/03/128203aa4c9be1aaf93d2a28c4901db4.jpg');
     x += 14;
 });

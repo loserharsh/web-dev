@@ -15,11 +15,12 @@ Instead of only following tutorials, I’m trying to learn by **building, breaki
 
 | Project                         | Status         | What I Learned                 |
 | ------------------------------- | -------------- | ------------------------------ |
-| 🎬 YouTube UI Clone             | ✅ Completed    | HTML structure, CSS layouts    |
-| 📝 UltraEdit Landing Page Clone | ✅ Completed    | Layouts, positioning, styling  |
-| 🎬 Netflix Clone                | 🚧 In Progress | Building larger layouts        |
-| ✨ CSS Animation Experiments     | 🔄 Ongoing     | Animations & transitions       |
-| 📱 Tracker UI — Reels           | 🔄 Ongoing     | UI design & responsive layouts |
+|  YouTube UI Clone             |  Completed    | HTML structure, CSS layouts    |
+|  UltraEdit Landing Page Clone |  Completed    | Layouts, positioning, styling  |
+|  Netflix Clone                |  In Progress | Building larger layouts        |
+|  CSS Animation Experiments     |  Completed     | Animations & transitions       |
+|  Tracker UI — Reels           |  Completed     | UI design & responsive layouts |
+| database detective            | Ongoing        | Something                      |
 
 ## 📈 What I'm Learning
 

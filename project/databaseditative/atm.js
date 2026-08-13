@@ -1,7 +1,7 @@
 const template = document.getElementById('box-template');
 let x = 100;
 
-function createBox(x) {
+function createBox(x,color1) {
     const box = template.content.cloneNode(true);
     const sbox = box.querySelector('.box');
     sbox.style.left = x + 'px';
@@ -9,7 +9,7 @@ function createBox(x) {
     const closeButton = box.querySelector('.close');
     const minimizeButton = box.querySelector('.minimize');
     const tbar = box.querySelector('.tbar');
-
+    sbox.style.backgroundColor = color1;
     // Close
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
@@ -82,9 +82,23 @@ function createBox(x) {
     document.body.appendChild(box);
 }
 
-const spawn = document.querySelector('.app');
+const spawn = document.querySelector('.app1');
 
 spawn.addEventListener('click', () => {
-    x += 14;
     createBox(x);
+    x += 14;
+});
+const app2 = document.querySelector('.app2');
+app2.style.backgroundColor = 'red';
+
+app2.addEventListener('click', () => {
+    createBox(x, 'red');
+    x += 14;
+});
+const app3 = document.querySelector('.app3');
+app3.style.backgroundColor = 'blue';
+
+app3.addEventListener('click', () => {
+    createBox(x, 'blue');
+    x += 14;
 });

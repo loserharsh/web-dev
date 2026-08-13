@@ -4,21 +4,38 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+}
 
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+.main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .apps {
     display: flex;
-    gap:10px;
+
+    padding: 20px;
+    gap:20px;
     flex-direction: column;
-    width: 60px;
+    width: 140px;
     height: 100vh;
     /* background-color: aqua; */
 }
 
 .apps > div {
+    outline: 1px solid black;
     display: flex;
     justify-content: left;
     width: 100%;
-    height: 50px;
+    height: 100px;
     background-color: rgb(82, 159, 159);
 }
 
@@ -65,4 +82,13 @@ li{
     display: none;
     justify-content: center;
     background-color: #aa9c9c;
+}
+
+.taskbar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    outline: 2px solid black;
+    background-color: #b3b1b1;
 }

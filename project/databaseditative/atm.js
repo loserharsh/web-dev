@@ -2,7 +2,7 @@ const template = document.getElementById('box-template');
 let x = 100;
 let z = 1;
 
-function createBox(x,color1, image,z, image2) {
+function createBox(x, color1, image, z, image2) {
     const box = template.content.cloneNode(true);
     const sbox = box.querySelector('.box');
     sbox.style.left = x + 100 + 'px';
@@ -15,18 +15,18 @@ function createBox(x,color1, image,z, image2) {
     image1.src = image;
 
     //tastbar
-    const  taskbarIcons = document.createElement('div');
+    const taskbarIcons = document.createElement('div');
     taskbarIcons.setAttribute('class', 'taskbar-icons1');
     document.querySelector('.taskbar-icons').appendChild(taskbarIcons);
-    
+
     taskbarIcons.style.backgroundImage = `url(${image2})`;
     taskbarIcons.style.backgroundSize = 'cover';
     taskbarIcons.style.backgroundPosition = 'center';
     taskbarIcons.style.borderRadius = '10px';
     taskbarIcons.style.width = '100px';
     taskbarIcons.style.height = '100%';
-    
-    
+
+
     sbox.addEventListener('mousedown', () => {
         z++;
         sbox.style.zIndex = z;
@@ -35,10 +35,16 @@ function createBox(x,color1, image,z, image2) {
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
     });
+    closeButton.addEventListener('mouseover', () => {
+        closeButton.style.backgroundColor = '#c46969';
+    });
+    closeButton.addEventListener('mouseout', () => {
+        closeButton.style.backgroundColor = '#aa9c9c';
+    });
     closeButton.addEventListener('click', () => {
         taskbarIcons.remove();
     });
-    
+
     // Minimize
     minimizeButton.addEventListener('click', () => {
         const mbox = minimizeButton.closest('.box');
@@ -47,8 +53,8 @@ function createBox(x,color1, image,z, image2) {
             mbox.style.display = 'block';
         });
     });
-
-
+    
+    
     const maximize1Button = box.querySelector('.maximize1');
     maximize1Button.style.display = 'none';
     maximize1Button.addEventListener('click', () => {
@@ -57,7 +63,7 @@ function createBox(x,color1, image,z, image2) {
         maximizeButton.style.display = 'block';
         maximizeButton.style.display = 'flex';
         maximizeButton.style.justifyContent = 'center';
-        mxbox.style.position  = 'absolute';
+        mxbox.style.position = 'absolute';
         mxbox.style.width = '480px';
         mxbox.style.height = '270px';
         mxbox.style.top = '100px'
@@ -71,42 +77,54 @@ function createBox(x,color1, image,z, image2) {
         maximize1Button.style.display = 'block';
         maximize1Button.style.display = 'flex';
         maximize1Button.style.justifyContent = 'center';
-        mxbox.style.position  = 'absolute';
+        mxbox.style.position = 'absolute';
         mxbox.style.width = '100vw';
         mxbox.style.height = '100vh';
         mxbox.style.top = '0px'
         mxbox.style.left = '0px'
     });
+    maximizeButton.addEventListener('mouseover', () => {
+        maximizeButton.style.backgroundColor = '#77d989';
+    });
+    maximizeButton.addEventListener('mouseout', () => {
+        maximizeButton.style.backgroundColor = '#aa9c9c';
+    });
+    minimizeButton.addEventListener('mouseover', () => {
+        minimizeButton.style.backgroundColor = '#c8c87b';
+    });
+    minimizeButton.addEventListener('mouseout', () => {
+        minimizeButton.style.backgroundColor = '#aa9c9c';
+    });
     sbox.style.zIndex = z;
     // Dragging
     let newX;
     let newY;
-    
+
     tbar.addEventListener('mousedown', (e) => {
         newX = e.clientX;
         newY = e.clientY;
         function mousemove(e) {
             const dx = e.clientX - newX;
             const dy = e.clientY - newY;
-            
+
             const mbox = tbar.closest('.box');
-            
+
             mbox.style.left = mbox.offsetLeft + dx + 'px';
             mbox.style.top = mbox.offsetTop + dy + 'px';
-            
+
             newX = e.clientX;
             newY = e.clientY;
         }
-        
+
         function mouseup() {
             document.removeEventListener('mousemove', mousemove);
             document.removeEventListener('mouseup', mouseup);
         }
-        
+
         document.addEventListener('mousemove', mousemove);
         document.addEventListener('mouseup', mouseup);
     });
-    
+
     document.body.appendChild(box);
 }
 
@@ -122,7 +140,7 @@ app2.style.backgroundColor = 'red';
 
 app2.addEventListener('click', () => {
     createBox(x, 'red', 'https://i.pinimg.com/736x/26/43/b8/2643b82fc34daa34929d9fe268857eaa.jpg', z, 'https://i.pinimg.com/736x/6a/4c/5e/6a4c5ed675aa1963d956b54afee88482.jpg');
-    
+
     x += 14;
 });
 const app3 = document.querySelector('.app3');

@@ -57,6 +57,7 @@ html, body {
     outline: 1px solid black;
 }
 
+
 .box .tbar{
     width: 100%;
     height: 20px;
@@ -71,24 +72,30 @@ html, body {
 li{
     display: flex;
     justify-content: center;
-    background-color: #7d3636;
+    background-color: #aa9c9c;
     width: 30px;
     height: 20px;
     cursor: pointer;
 }
 
+
 .minimize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #aa9c9c;
 }
 .maximize{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #aa9c9c;
 }
 
 .maximize1{
     display: none;
     justify-content: center;
+    align-items: center;
     background-color: #aa9c9c;
 }
 
@@ -105,6 +112,9 @@ li{
 
 .content{
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -134,4 +144,31 @@ li{
     background-color: #7d3636;
     border-radius: 11px;
     cursor: pointer;
+}
+
+.resize-right {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 8px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
+.resize-bottom {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    cursor: ns-resize;
+}
+
+.resize-corner {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize;
 }

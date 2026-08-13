@@ -17,7 +17,22 @@ function createBox(x) {
     // Minimize
     minimizeButton.addEventListener('click', () => {
         const mbox = minimizeButton.closest('.box');
-        mbox.style.backgroundColor = 'red';
+        mbox.style.position  = 'absolute';
+        mbox.style.top = '100px';
+        mbox.style.left = '100px';
+        mbox.style.width = '320px';
+        mbox.style.height = '180px';
+    });
+
+    // Maximize
+    const maximizeButton = box.querySelector('.maximize');
+    maximizeButton.addEventListener('click', () => {
+        const mxbox = maximizeButton.closest('.box');
+        mxbox.style.position  = 'absolute';
+        mxbox.style.width = '100vw';
+        mxbox.style.height = '100vh';
+        mxbox.style.top = '0px'
+        mxbox.style.left = '0px'
     });
 
     // Dragging

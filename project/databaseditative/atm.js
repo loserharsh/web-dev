@@ -13,7 +13,18 @@ function createBox(x,color1, image,z) {
     sbox.style.backgroundColor = color1;
     const image1 = box.querySelector('.box-img');
     image1.src = image;
+
+    //tastbar
+    const  taskbarIcons = document.createElement('div');
+    taskbarIcons.setAttribute('class', 'taskbar-icons1');
+    document.querySelector('.taskbar-icons').appendChild(taskbarIcons);
     
+    taskbarIcons.style.backgroundImage = `url(${image})`;
+    taskbarIcons.style.backgroundSize = 'cover';
+    taskbarIcons.style.borderRadius = '10px';
+    taskbarIcons.style.width = '100px';
+    taskbarIcons.style.height = '100%';
+
     sbox.addEventListener('mousedown', () => {
         z++;
         sbox.style.zIndex = z;
@@ -21,6 +32,9 @@ function createBox(x,color1, image,z) {
     // Close
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
+    });
+    closeButton.addEventListener('click', () => {
+        taskbarIcons.remove();
     });
     
     // Minimize

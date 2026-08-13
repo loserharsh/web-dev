@@ -1,8 +1,8 @@
 const template = document.getElementById('box-template');
 let x = 100;
+let z = 1;
 
-
-function createBox(x,color1, image) {
+function createBox(x,color1, image,z) {
     const box = template.content.cloneNode(true);
     const sbox = box.querySelector('.box');
     sbox.style.left = x + 100 + 'px';
@@ -14,7 +14,10 @@ function createBox(x,color1, image) {
     const image1 = box.querySelector('.box-img');
     image1.src = image;
     
-    
+    sbox.addEventListener('mousedown', () => {
+        z++;
+        sbox.style.zIndex = z;
+    });
     // Close
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
@@ -53,7 +56,7 @@ function createBox(x,color1, image) {
         mxbox.style.top = '0px'
         mxbox.style.left = '0px'
     });
-    
+    sbox.style.zIndex = z;
     // Dragging
     let newX;
     let newY;
@@ -61,7 +64,6 @@ function createBox(x,color1, image) {
     tbar.addEventListener('mousedown', (e) => {
         newX = e.clientX;
         newY = e.clientY;
-        
         function mousemove(e) {
             const dx = e.clientX - newX;
             const dy = e.clientY - newY;
@@ -90,20 +92,22 @@ function createBox(x,color1, image) {
 const spawn = document.querySelector('.app1');
 
 spawn.addEventListener('click', () => {
-    createBox(x, undefined, 'https://i.pinimg.com/736x/ad/cb/5c/adcb5c8b2b97e49ac2ae289114dfa729.jpg');
-    x += 14;
+    createBox(x, undefined, 'https://i.pinimg.com/736x/ad/cb/5c/adcb5c8b2b97e49ac2ae289114dfa729.jpg', z);
+    x += 14
+
 });
 const app2 = document.querySelector('.app2');
 app2.style.backgroundColor = 'red';
 
 app2.addEventListener('click', () => {
-    createBox(x, 'red', 'https://i.pinimg.com/736x/26/43/b8/2643b82fc34daa34929d9fe268857eaa.jpg');
+    createBox(x, 'red', 'https://i.pinimg.com/736x/26/43/b8/2643b82fc34daa34929d9fe268857eaa.jpg', z);
+    
     x += 14;
 });
 const app3 = document.querySelector('.app3');
 app3.style.backgroundColor = 'blue';
 
 app3.addEventListener('click', () => {
-    createBox(x, 'blue', 'https://i.pinimg.com/736x/39/2f/f2/392ff28b2dac432be2e5779031d22d1a.jpg');
+    createBox(x, 'blue', 'https://i.pinimg.com/736x/39/2f/f2/392ff28b2dac432be2e5779031d22d1a.jpg', z   );
     x += 14;
 });

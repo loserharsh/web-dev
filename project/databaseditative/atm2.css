@@ -29,12 +29,14 @@
     width: 320px;
     height: 180px;
     background-color: #57706b;
+    outline: 1px solid black;
 }
 
 .box .tbar{
     width: 100%;
     height: 20px;
     background-color: #bab7b7;
+    outline: 1px solid black;
 }
 .tbar ul{
     display: flex;
@@ -54,5 +56,13 @@ li{
     background-color: #aa9c9c;
 }
 .maximize{
+    display: flex;
+    justify-content: center;
+    background-color: #aa9c9c;
+}
+
+.maximize1{
+    display: none;
+    justify-content: center;
     background-color: #aa9c9c;
 }

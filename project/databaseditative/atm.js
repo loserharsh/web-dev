@@ -1,5 +1,6 @@
 const template = document.getElementById('box-template');
 let x = 100;
+
 function createBox(x) {
     const box = template.content.cloneNode(true);
     const sbox = box.querySelector('.box');
@@ -13,21 +14,34 @@ function createBox(x) {
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
     });
-
+    
     // Minimize
     minimizeButton.addEventListener('click', () => {
         const mbox = minimizeButton.closest('.box');
-        mbox.style.position  = 'absolute';
-        mbox.style.top = '100px';
-        mbox.style.left = '100px';
-        mbox.style.width = '320px';
-        mbox.style.height = '180px';
+        mbox.style.backgroundColor = '#8d3737';
     });
-
+    const maximize1Button = box.querySelector('.maximize1');
+    maximize1Button.style.display = 'none';
+    maximize1Button.addEventListener('click', () => {
+        const mxbox = maximize1Button.closest('.box');
+        maximize1Button.style.display = 'none';
+        maximizeButton.style.display = 'block';
+        maximizeButton.style.display = 'flex';
+        maximizeButton.style.justifyContent = 'center';
+        mxbox.style.position  = 'absolute';
+        mxbox.style.width = '320px';
+        mxbox.style.height = '180px';
+        mxbox.style.top = '100px'
+        mxbox.style.left = '100px'
+    });
     // Maximize
     const maximizeButton = box.querySelector('.maximize');
     maximizeButton.addEventListener('click', () => {
         const mxbox = maximizeButton.closest('.box');
+        maximizeButton.style.display = 'none';
+        maximize1Button.style.display = 'block';
+        maximize1Button.style.display = 'flex';
+        maximize1Button.style.justifyContent = 'center';
         mxbox.style.position  = 'absolute';
         mxbox.style.width = '100vw';
         mxbox.style.height = '100vh';

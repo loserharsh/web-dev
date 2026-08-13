@@ -37,14 +37,22 @@ html, body {
     width: 100%;
     height: 100px;
     background-color: rgb(82, 159, 159);
+    object-fit: cover;
+    border-radius: 14px;
+}
+.apps > div:hover{
+    cursor: pointer;
+}
+.apps >div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
 }
 
 .box{
     position: absolute;
-    top: 100px;
-    left: 100px;   
-    width: 320px;
-    height: 180px;
+    width: 480px;
+    height: 270px;
     background-color: #57706b;
     outline: 1px solid black;
 }
@@ -91,4 +99,16 @@ li{
     height: 40px;
     outline: 2px solid black;
     background-color: #b3b1b1;
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.content img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }

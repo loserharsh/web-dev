@@ -1,15 +1,20 @@
 const template = document.getElementById('box-template');
 let x = 100;
 
-function createBox(x,color1) {
+
+function createBox(x,color1, image) {
     const box = template.content.cloneNode(true);
     const sbox = box.querySelector('.box');
-    sbox.style.left = x + 'px';
-    sbox.style.top = x + 'px';
+    sbox.style.left = x + 100 + 'px';
+    sbox.style.top = x + 100 + 'px';
     const closeButton = box.querySelector('.close');
     const minimizeButton = box.querySelector('.minimize');
     const tbar = box.querySelector('.tbar');
     sbox.style.backgroundColor = color1;
+    const image1 = box.querySelector('.box-img');
+    image1.src = image;
+    
+    
     // Close
     closeButton.addEventListener('click', () => {
         closeButton.closest('.box').remove();
@@ -29,10 +34,10 @@ function createBox(x,color1) {
         maximizeButton.style.display = 'flex';
         maximizeButton.style.justifyContent = 'center';
         mxbox.style.position  = 'absolute';
-        mxbox.style.width = '320px';
-        mxbox.style.height = '180px';
+        mxbox.style.width = '480px';
+        mxbox.style.height = '270px';
         mxbox.style.top = '100px'
-        mxbox.style.left = '100px'
+        mxbox.style.left = '300px'
     });
     // Maximize
     const maximizeButton = box.querySelector('.maximize');
@@ -48,57 +53,57 @@ function createBox(x,color1) {
         mxbox.style.top = '0px'
         mxbox.style.left = '0px'
     });
-
+    
     // Dragging
     let newX;
     let newY;
-
+    
     tbar.addEventListener('mousedown', (e) => {
         newX = e.clientX;
         newY = e.clientY;
-
+        
         function mousemove(e) {
             const dx = e.clientX - newX;
             const dy = e.clientY - newY;
-
+            
             const mbox = tbar.closest('.box');
-
+            
             mbox.style.left = mbox.offsetLeft + dx + 'px';
             mbox.style.top = mbox.offsetTop + dy + 'px';
-
+            
             newX = e.clientX;
             newY = e.clientY;
         }
-
+        
         function mouseup() {
             document.removeEventListener('mousemove', mousemove);
             document.removeEventListener('mouseup', mouseup);
         }
-
+        
         document.addEventListener('mousemove', mousemove);
         document.addEventListener('mouseup', mouseup);
     });
-
+    
     document.body.appendChild(box);
 }
 
 const spawn = document.querySelector('.app1');
 
 spawn.addEventListener('click', () => {
-    createBox(x);
+    createBox(x, undefined, 'https://i.pinimg.com/736x/ad/cb/5c/adcb5c8b2b97e49ac2ae289114dfa729.jpg');
     x += 14;
 });
 const app2 = document.querySelector('.app2');
 app2.style.backgroundColor = 'red';
 
 app2.addEventListener('click', () => {
-    createBox(x, 'red');
+    createBox(x, 'red', 'https://i.pinimg.com/736x/26/43/b8/2643b82fc34daa34929d9fe268857eaa.jpg');
     x += 14;
 });
 const app3 = document.querySelector('.app3');
 app3.style.backgroundColor = 'blue';
 
 app3.addEventListener('click', () => {
-    createBox(x, 'blue');
+    createBox(x, 'blue', 'https://i.pinimg.com/736x/39/2f/f2/392ff28b2dac432be2e5779031d22d1a.jpg');
     x += 14;
 });

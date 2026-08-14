@@ -1,33 +1,28 @@
-const messages = [
-    "Initializing Hacking",
-    "Reading your Files",
-    "Password files Detected",
-    "Sending all passwords and personal files to server",
-    "Cleaning up"
-];
-const msg = ["."];
-
-const terminal = document.getElementById("terminal");
-
-function addMessage(message) {
-    const line = document.createElement("div");
-    line.textContent = message;
-    terminal.appendChild(line);
-}
-function addmage(msg){
-    const line = document.createElement("div");
-    line.textContent = msg;
-    terminal.appendChild(line);
-}
-async function startHacking() {
-    for (const message of messages) {
-
-        // random delay between 1 and 7 seconds
-        const delay = Math.floor(Math.random() * 3 + 1) * 1000;
-
-        await new Promise(resolve => setTimeout(resolve, delay));
-        addMessage(message + msg[0]);
-    }
+function getdata(data){
+    return new Promise((resolve, reject) => {
+        let internet = Math.floor(Math.random() * 10);
+        console.log("Internet speed is: " + internet);
+        if (internet > 5) {
+            resolve(data);
+        } else {
+            reject("No Internet this is the error message");
+        }
+    });
 }
 
-startHacking();
+getdata("First data saved")
+    .then((data) => {
+        console.log(data);
+        return getdata("Second data saved");
+    })
+    .then((data) => {
+        console.log(data);
+        return getdata("Third data saved");
+    })
+    .then((data) => {
+        console.log(data);
+        return getdata("Fourth data saved");
+    })
+    .catch((error) => {
+        console.log(error);
+    });

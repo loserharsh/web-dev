@@ -20,7 +20,7 @@ Instead of only following tutorials, I’m trying to learn by **building, breaki
 |  Netflix Clone                |  In Progress | Building larger layouts        |
 |  CSS Animation Experiments     |  Completed     | Animations & transitions       |
 |  Tracker UI — Reels           |  Completed     | UI design & responsive layouts |
-| database detective            | ver 1 done        | Something                      |
+| database detective            | ver 1 done        | Something Something           |
 
 ## 📈 What I'm Learning
 

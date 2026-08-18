@@ -1,65 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap');
-
-
-
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  min-height: 100vh;
-  color: #222;
-  background-color: #ececec;
-  font-size: clamp(1rem, 2vw + 0.5rem, 2rem);
-  /* // font-size: 24px; */
-  font-family: "Poppins", sans-serif;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #222;
 }
 
-.title {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.container .card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  background: rgb(45, 45, 45);
+  border-radius: 20px;
   overflow: hidden;
-  padding: 36px 12px;
-
-  span {
-    position: relative;
-    font-family: "Playwrite IS", cursive;
-    font-size: 1.4em;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 63%;
-      translate: -50% 0;
-      width: 250%;
-      aspect-ratio: 1/1;
-      z-index: -1;
-      border: 30px solid #a8de97;
-      border-radius: 50%;
-
-      @starting-style {
-        --mask-progress: 0%;
-      }
-      transition: --mask-progress 0.5s;
-      transition-delay: 0.3s;
-      mask-image: conic-gradient(from -27deg, #000 var(--mask-progress), #0000 0);
-
-      @media (max-width: 768px) {
-        border-width: 20px;
-      }
-    }
-
-  }
+  cursor: pointer;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  translate: -50% -50%;
+  background: radial-gradient(var(--clr), transparent 60%);
+  width: 700px;
+  height: 700px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
 }
 
-@property --mask-progress {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 12%;
+.card:hover::before {
+  opacity: 1;
 }
 
+.container .card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 18px;
+  background: rgba(45, 45, 45, 0.75);
+  pointer-events: none;
+}

@@ -1,12 +1,7 @@
-let stunder = {
-    name: "Stunder",
-    age: 25
-}
-
-// 
-// https://catfact.ninja/fact
-
-// {
-//   "fact": "Among many other diseases, cats can suffer from anorexia, senility, feline AIDS and acne.",
-//   "length": 89
-// }
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("mousemove", ({ clientX, clientY }) => {
+    const { left, top } = card.getBoundingClientRect();
+    card.style.setProperty("--x", `${clientX - left}px`);
+    card.style.setProperty("--y", `${clientY - top}px`);
+  });
+});

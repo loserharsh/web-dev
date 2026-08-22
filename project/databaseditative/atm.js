@@ -32,18 +32,18 @@ function createBox(x, color1, image, z, image2) {
         sbox.style.zIndex = z;
     });
     // Close
-    closeButton.addEventListener('click', () => {
-        closeButton.closest('.box').remove();
-    });
-    closeButton.addEventListener('mouseover', () => {
-        closeButton.style.backgroundColor = '#c46969';
-    });
-    closeButton.addEventListener('mouseout', () => {
-        closeButton.style.backgroundColor = '#aa9c9c';
-    });
-    closeButton.addEventListener('click', () => {
-        taskbarIcons.remove();
-    });
+    // closeButton.addEventListener('click', () => {
+    //     closeButton.closest('.box').remove();
+    // });
+    // closeButton.addEventListener('mouseover', () => {
+    //     closeButton.style.backgroundColor = '#c46969';
+    // });
+    // closeButton.addEventListener('mouseout', () => {
+    //     closeButton.style.backgroundColor = '#aa9c9c';
+    // });
+    // closeButton.addEventListener('click', () => {
+    //     taskbarIcons.remove();
+    // });
 
     // Minimize
     minimizeButton.addEventListener('click', () => {

@@ -10,6 +10,7 @@ Instead of only following tutorials, I’m trying to learn by **building, breaki
 * **CSS3**
 * **JavaScript** — Learning
 * **Git & GitHub**
+* **more now **
 
 ## 🚀 Projects
 
